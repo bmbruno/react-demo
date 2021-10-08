@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Hike Inn Trail",
+        "length": 4.8,
+        "image": "https://www.brandonbruno.com/sites/code/reactdemo/photos/hikeinn.jpg",
+        "rating": "moderate",
+        "type": "Destination"
+    },
+    {
+        "name": "Preacher's Rock",
+        "length": 1,
+        "image": "https://www.brandonbruno.com/sites/code/reactdemo/photos/preachers.jpg",
+        "rating": "easy",
+        "type": "Vista"
+    },
+    {
+        "name": "Raven's Cliff Falls",
+        "length": 2.5,
+        "image": "https://www.brandonbruno.com/sites/code/reactdemo/photos/ravenscliff.jpg",
+        "rating": "easy",
+        "type": "Waterfall"
+    },
+    {
+        "name": "Cowrock Mountain",
+        "length": 1.5,
+        "image": "https://www.brandonbruno.com/sites/code/reactdemo/photos/cowrock.jpg",
+        "rating": "easy",
+        "type": "Vista"
+    },
+    {
+        "name": "Blood Mountain",
+        "length": 8,
+        "image": "https://www.brandonbruno.com/sites/code/reactdemo/photos/bloodmountain.jpg",
+        "rating": "difficult",
+        "type": "Vista"
+    },
+    {
+        "name": "Hogpen Gap",
+        "length": 1.8,
+        "image": "https://www.brandonbruno.com/sites/code/reactdemo/photos/hogpen.jpg",
+        "rating": "moderate",
+        "type": "Destination"
+    }
+]
