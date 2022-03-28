@@ -48,6 +48,5 @@ body { background-color: rgb(226, 226, 226); font-family: 'Ubuntu', sans-serif; 
 
 @media (min-width: 1500px)
 {
-    div.app { max-width: 70%; }
-
+    div.app { max-width: 1500px; }
 }
