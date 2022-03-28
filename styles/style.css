@@ -6,7 +6,6 @@ ul > li { margin-left: 1.5em; list-style-type: disc; }
 div.app { margin: 2em auto; text-align: left; max-width: 100%; }
 ul.trail-list > li { margin: 0 1em; list-style-type: none; width: 100%; }
 
-
 body { background-color: rgb(226, 226, 226); font-family: 'Ubuntu', sans-serif; }
 
 .filters { margin: 1em 0; }
@@ -41,6 +40,6 @@ body { background-color: rgb(226, 226, 226); font-family: 'Ubuntu', sans-serif; 
 @media (min-width: 60em)
 {
     div.app { margin: 2em auto; text-align: left; max-width: 65%; }
-    ul.trail-list > li { margin: 0 1em; list-style-type: none; width: 45%; float: left; }
-    ul.trail-list > li:nth-child(2n + 1) { clear: both; }
+    ul.trail-list > li { margin: 0; padding: 0 1em; list-style-type: none; width: 50%; float: left; }
+    ul.trail-list > li:nth-child(2n + 1) { content: ""; display: table; clear: both; }
 }
