@@ -1,10 +1,10 @@
 h1, h2, h3, h4, h5, h6 { margin-bottom: 1em; font-family: 'Kanit', sans-serif; }
 h1 { font-size: 3em; }
 
-ul > li { margin-left: 1.5em; list-style-type: disc; }
+ul > li { list-style-type: disc; }
 
 div.app { margin: 2em auto; text-align: left; max-width: 100%; }
-ul.trail-list > li { margin: 0 1em; list-style-type: none; width: 100%; }
+ul.trail-list > li { padding: 0 1em; list-style-type: none; width: 100%; }
 
 body { background-color: rgb(226, 226, 226); font-family: 'Ubuntu', sans-serif; }
 
@@ -37,9 +37,17 @@ body { background-color: rgb(226, 226, 226); font-family: 'Ubuntu', sans-serif; 
 
 /* COMPONENT: FILTER: RATING */
 
-@media (min-width: 60em)
+/* RESPONSIVE TWEAKS */
+
+@media (min-width: 1000px)
 {
-    div.app { margin: 2em auto; text-align: left; max-width: 65%; }
+    div.app { max-width: 90%; }
     ul.trail-list > li { margin: 0; padding: 0 1em; list-style-type: none; width: 50%; float: left; }
     ul.trail-list > li:nth-child(2n + 1) { content: ""; display: table; clear: both; }
+}
+
+@media (min-width: 1500px)
+{
+    div.app { max-width: 70%; }
+
 }
