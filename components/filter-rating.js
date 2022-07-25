@@ -1,9 +1,17 @@
 /*
 
+COMPONENT: Rating
+
 PROPS
 
-id (string)
-label (string)
+  * id (string) - ID to use for this component's input/label elements
+  * label (string) - HTML <label> value to display
+  * onRatingChange (function) - function used to lift state to the <App> parent component
+
+ABOUT
+
+  Renders the rating component, consisting of a radio button group.
+  This component lifts state (the value of the radio buttons) to its parent <App> component via the 'onRatingChange(event)' function. Filter logic is handled by that parent.
 
 */
 

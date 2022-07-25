@@ -6,11 +6,13 @@ PROPS
 
   none
 
-This is the core of the React application. It's responsible for things like:
+ABOUT
 
-  * Loading initial data from a JSON file
-  * Handles a few state changes from child components (see React concept 'lifting state')
-  * Renders the core structure of the application, including setup of child components (see render() method at bottom of this file)
+  This is the core of the React application. It's responsible for things like:
+
+    * Loading initial data from a JSON file
+    * Handles a few state changes from child components (see React concept 'lifting state')
+    * Renders the core structure of the application, including setup of child components (see render() method at bottom of this file)
 
 */
 

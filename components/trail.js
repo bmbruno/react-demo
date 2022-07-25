@@ -1,3 +1,21 @@
+/*
+
+COMPONENT: Trail
+
+PROPS
+
+  * trailName (string) - name of the trail
+  * image (string) - URL of the trail image
+  * type (string) - type label of the trail
+  * length (number) - length of trail in miles
+  * rating ()
+
+ABOUT
+
+  Renders a trail card (title, image, info, etc.).
+
+*/
+
 class Trail extends React.Component {
 
     constructor(props) {
