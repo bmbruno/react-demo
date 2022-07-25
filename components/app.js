@@ -1,3 +1,19 @@
+/*
+
+COMPONENT: App
+
+PROPS
+
+  none
+
+This is the core of the React application. It's responsible for things like:
+
+  * Loading initial data from a JSON file
+  * Handles a few state changes from child components (see React concept 'lifting state')
+  * Renders the core structure of the application, including setup of child components (see render() method at bottom of this file)
+
+*/
+
 class App extends React.Component
 {
   constructor(props) {
@@ -5,10 +21,15 @@ class App extends React.Component
     super(props);
 
     this.state = {
+
+      // (array of objects) Initial list of trail data
       trailData: [],
+
+      // (array of objects) Filtered list of trail data
       filteredTrailData: []
     }
 
+    // Initial bindings for interactive elements (boilerplate code required for class-based components)
     this.typeAheadChange = this.typeAheadChange.bind(this);
     this.ratingChange = this.ratingChange.bind(this);
     this.resetFilters = this.resetFilters.bind(this);
@@ -18,6 +39,8 @@ class App extends React.Component
 
   }
 
+  // React lifecycle method (called after the component instantiates but before it renders)
+  // For this application, this function loads the initial data from a JSON file using window.fetch()
   async componentDidMount() {
 
     try 
@@ -37,7 +60,7 @@ class App extends React.Component
 
   }
 
-  // Update data when type-ahead input changes
+  // Handles the type-ahead input change event
   typeAheadChange(value) {
 
     if (value.length > 2) {
@@ -54,7 +77,7 @@ class App extends React.Component
 
   }
 
-  // Updates data based on filters and sets new state
+  // Updates trail data based on filters and sets new state
   updateFilteredData(trailName, rating) {
 
     let output = [];
@@ -89,6 +112,7 @@ class App extends React.Component
 
   }
 
+  // Render's the application structure and child components
   render() {
     return (
 
@@ -120,16 +144,16 @@ class App extends React.Component
 
         <ul className="trail-list">
           
-          {this.state.filteredTrailData.map(data => (
+          {this.state.filteredTrailData.map(element => (
 
-            <li key={data.name}>
+            <li key={element.name}>
 
               <Trail
-                trailName={data.name}
-                type={data.type} 
-                length={data.length}
-                rating={data.rating}
-                image={data.image} />
+                trailName={element.name}
+                type={element.type} 
+                length={element.length}
+                rating={element.rating}
+                image={element.image} />
 
             </li>
 
