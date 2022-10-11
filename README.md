@@ -5,7 +5,7 @@ This sample React application lets you quickly play with simple React concepts i
 More information:
 https://stackoverflow.com/questions/53042123/can-babel-standalone-be-used-if-index-html-is-served-locally-no-webserver
 
-This demo uses [class-based components](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/).
+Each component has a [class-based](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/) and function-based version. This allows you two view them side-by-side to compare the syntax, logic, and readability differences between each.
 
 ## Live Demo
 

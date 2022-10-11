@@ -32,14 +32,17 @@ class Rating extends React.Component {
 
     onRadioChange(event) {
 
+        // Update state of 'selectedOption' variable
         this.setState({
             selectedOption: event.target.value
         });
 
+        // Lift state to parent component via a prop
         this.props.onRatingChange(event.target.value);
 
     }
 
+    // Used by the parent component
     resetFilter() {
 
         this.setState({
@@ -47,7 +50,7 @@ class Rating extends React.Component {
         });
 
     }
-
+    
     render() {
         return (
 

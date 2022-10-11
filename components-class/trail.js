@@ -8,7 +8,7 @@ PROPS
   * image (string) - URL of the trail image
   * type (string) - type label of the trail
   * length (number) - length of trail in miles
-  * rating ()
+  * rating (number) - difficulty rating
 
 ABOUT
 

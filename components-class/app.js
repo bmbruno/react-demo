@@ -31,13 +31,14 @@ class App extends React.Component
       filteredTrailData: []
     }
 
+    // References to HTML elements that will be acesssed in code
+    this.refTypeAhead = React.createRef();
+    this.refRating = React.createRef();
+
     // Initial bindings for interactive elements (boilerplate code required for class-based components)
     this.typeAheadChange = this.typeAheadChange.bind(this);
     this.ratingChange = this.ratingChange.bind(this);
     this.resetFilters = this.resetFilters.bind(this);
-
-    this.refTypeAhead = React.createRef();
-    this.refRating = React.createRef();
 
   }
 
@@ -127,7 +128,7 @@ class App extends React.Component
         <div className="filters">
 
           <TypeAhead
-            id="typeahead123"
+            id="TypeHeadFilter"
             label="Filter by Name"
             onTypeAheadChange={this.typeAheadChange} 
             ref={this.refTypeAhead} />

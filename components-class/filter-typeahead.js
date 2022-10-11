@@ -32,6 +32,7 @@ class TypeAhead extends React.Component {
 
     }
 
+    // Used by the parent component
     resetFilter() {
 
         // This should really be done through state, not direct manipulation of components
