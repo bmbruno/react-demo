@@ -6,6 +6,7 @@ PROPS
 
   * id (string) - ID to use for this component's input/label elements
   * label (string) - HTML <label> value to display
+  * value (string) - value of this control
   * onTypeAheadChange (function) - function used to lift state to the <App> parent component
 
 ABOUT
@@ -15,7 +16,7 @@ ABOUT
 
 */
 
-const TypeAhead = React.forwardRef(({ id, label, onTypeAheadChange }, ref) => {
+const TypeAhead = ({ id, label, value, onTypeAheadChange }) => {
 
     const refInput = React.createRef();
 
@@ -24,16 +25,6 @@ const TypeAhead = React.forwardRef(({ id, label, onTypeAheadChange }, ref) => {
         onTypeAheadChange(event.target.value);
 
     };
-
-    // Used by the parent component
-    React.useImperativeHandle(ref, () => {
-
-        const resetFilter = () => {
-            // This should really be done through state, not direct manipulation of components
-            refInput.current.value = "";
-        };
-
-    });
 
     return (
 
@@ -44,9 +35,10 @@ const TypeAhead = React.forwardRef(({ id, label, onTypeAheadChange }, ref) => {
                 className="text typeahead"
                 onKeyUp={typeAheadKeyUp}
                 id={id}
-                ref={refInput} />
+                ref={refInput}
+                defaultValue={value} />
         </div>
 
     );
 
-});
+};
