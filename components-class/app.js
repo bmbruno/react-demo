@@ -18,33 +18,37 @@ ABOUT
 
 class App extends React.Component
 {
+  
   constructor(props) {
 
     super(props);
 
     this.state = {
 
-      // (array of objects) Initial list of trail data
+      // Initial list of trail data (array of objects)
       trailData: [],
 
-      // (array of objects) Filtered list of trail data
-      filteredTrailData: []
-    }
+      // Filtered list of trail data (array of objects)
+      filteredTrailData: [],
 
-    // References to HTML elements that will be acesssed in code
-    this.refTypeAhead = React.createRef();
-    this.refRating = React.createRef();
+      // Value of TypeAhead filter control (string)
+      valueTypeAhead: '',
+
+      // Value of Rating filter control (string)
+      valueRating: ''
+    };
 
     // Initial bindings for interactive elements (boilerplate code required for class-based components)
     this.typeAheadChange = this.typeAheadChange.bind(this);
     this.ratingChange = this.ratingChange.bind(this);
-    this.resetFilters = this.resetFilters.bind(this);
+    this.resetTypeAhead = this.resetTypeAhead.bind(this);
+    this.resetData = this.resetData.bind(this);
 
   }
 
   // React lifecycle method (called after the component instantiates but before it renders)
   // For this application, this function loads the initial data from a JSON file using window.fetch()
-  async componentDidMount() {
+  async componentDidMount () {
 
     try 
     {
@@ -64,9 +68,10 @@ class App extends React.Component
   }
 
   // Handles the type-ahead input change event
-  typeAheadChange(value) {
+  typeAheadChange (value) {
 
     if (value.length > 2) {
+      this.setState({ valueTypeAhead: value });
       this.updateFilteredData(value, null);
     } else {
       this.resetData();
@@ -74,24 +79,25 @@ class App extends React.Component
   }
 
   // Update data when rating filter changes
-  ratingChange(value) {
+  ratingChange (value) {
 
+    this.setState({ valueRating: value });
     this.updateFilteredData(null, value);
 
   }
 
   // Updates trail data based on filters and sets new state
-  updateFilteredData(trailName, rating) {
+  updateFilteredData (trailName, rating) {
 
     let output = [];
 
     if (trailName) {
-      this.refRating.current.resetFilter();
+      this.resetRating();
       output = this.state.trailData.filter(trail => trail.name.includes(trailName) );
     }
 
     if (rating) {
-      this.refTypeAhead.current.resetFilter();
+      this.resetTypeAhead();
       output = this.state.trailData.filter(trail => trail.rating == rating);
     }
 
@@ -100,23 +106,42 @@ class App extends React.Component
   }
 
   // Resets data to initial state
-  resetData() {
+  resetData () {
 
     this.setState({ filteredTrailData: this.state.trailData });
 
   }
 
-  // Reset filters and data
-  resetFilters() {
+    // Resets the TypeAhead component value
+  resetTypeAhead () {
 
-    this.refRating.current.resetFilter();
-    this.refTypeAhead.current.resetFilter();
+    this.setState({
+        valueTypeAhead: ''
+    });
+
+  };
+
+  // Resets the Rating component value
+  resetRating () {
+
+    this.setState({
+        valueRating: ''
+    });
+
+  };
+
+  // Reset filters and data
+  resetFilters () {
+
+    this.resetTypeAhead();
+    this.resetRating();
     this.resetData();
 
-  }
+  };
 
   // Render's the application structure and child components
-  render() {
+  render () {
+
     return (
 
       <>
@@ -130,14 +155,14 @@ class App extends React.Component
           <TypeAhead
             id="TypeHeadFilter"
             label="Filter by Name"
-            onTypeAheadChange={this.typeAheadChange} 
-            ref={this.refTypeAhead} />
+            value={this.state.valueTypeAhead}
+            onTypeAheadChange={this.typeAheadChange} />
 
           <Rating 
             id="RatingFilter"
             label="Rating (difficulty)"
-            onRatingChange={this.ratingChange} 
-            ref={this.refRating} />
+            value={this.state.valueRating}
+            onRatingChange={this.ratingChange} />
 
         </div>
 

@@ -24,8 +24,10 @@ const App = () => {
     // Filtered list of trail data (array of objects)
     const [filteredTrailData, setFilteredTrailData] = React.useState([]);
 
-    // Values of filter controls (both strings)
+    // Value of TypeAhead filter control (string)
     const [valueTypeAhead, setTypeAhead] = React.useState('');
+
+    // Value of Rating filter control (string)
     const [valueRating, setRating] = React.useState('');
     
     // React Hook: in this case, useEffect fires once when the component is loaded to handle the same logic as 'componentDidMount' in the class version of this component

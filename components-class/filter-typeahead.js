@@ -6,6 +6,7 @@ PROPS
 
   * id (string) - ID to use for this component's input/label elements
   * label (string) - HTML <label> value to display
+  * value (string) - value of this control
   * onTypeAheadChange (function) - function used to lift state to the <App> parent component
 
 ABOUT
@@ -32,14 +33,6 @@ class TypeAhead extends React.Component {
 
     }
 
-    // Used by the parent component
-    resetFilter() {
-
-        // This should really be done through state, not direct manipulation of components
-        this.refInput.current.value = "";
-
-    }
-
     render() {
 
         return (
@@ -51,7 +44,8 @@ class TypeAhead extends React.Component {
                     ref={this.refInput}
                     className="text typeahead"
                     onKeyUp={this.typeAheadKeyUp}
-                    id={this.props.id} />
+                    id={this.props.id}
+                    defaultValue={this.props.value} />
             </div>
 
         );
