@@ -79,6 +79,9 @@ const App = () => {
     const resetTypeAhead = () => {
 
         setTypeAhead('');
+        
+        // This is kind of hacky; clearing this input here to simpliy the TypeAhead component
+        document.getElementById("TypeAheadFilter").value = "";
 
     };
 
@@ -128,7 +131,7 @@ const App = () => {
             <div className="filters">
 
                 <TypeAhead
-                    id="TypeHeadFilter"
+                    id="TypeAheadFilter"
                     label="Filter by Name"
                     onTypeAheadChange={typeAheadChange} 
                     value={valueTypeAhead} />

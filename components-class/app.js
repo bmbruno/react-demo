@@ -119,6 +119,9 @@ class App extends React.Component
         valueTypeAhead: ''
     });
 
+    // This is kind of hacky; clearing this input here to simpliy the TypeAhead component
+    document.getElementById("TypeAheadFilter").value = "";
+
   };
 
   // Resets the Rating component value
@@ -153,7 +156,7 @@ class App extends React.Component
         <div className="filters">
 
           <TypeAhead
-            id="TypeHeadFilter"
+            id="TypeAheadFilter"
             label="Filter by Name"
             value={this.state.valueTypeAhead}
             onTypeAheadChange={this.typeAheadChange} />
