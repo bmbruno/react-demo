@@ -36,12 +36,16 @@ class App extends React.Component
 
       // Value of Rating filter control (string)
       valueRating: ''
+      
     };
 
     // Initial bindings for interactive elements (boilerplate code required for class-based components)
     this.typeAheadChange = this.typeAheadChange.bind(this);
     this.ratingChange = this.ratingChange.bind(this);
+    this.resetFilters = this.resetFilters.bind(this);
+    this.updateFilteredData = this.updateFilteredData.bind(this);
     this.resetTypeAhead = this.resetTypeAhead.bind(this);
+    this.resetRating = this.resetRating.bind(this);
     this.resetData = this.resetData.bind(this);
 
   }
@@ -122,7 +126,7 @@ class App extends React.Component
     // This is kind of hacky; clearing this input here to simpliy the TypeAhead component
     document.getElementById("TypeAheadFilter").value = "";
 
-  };
+  }
 
   // Resets the Rating component value
   resetRating () {
@@ -131,7 +135,7 @@ class App extends React.Component
         valueRating: ''
     });
 
-  };
+  }
 
   // Reset filters and data
   resetFilters () {
@@ -140,7 +144,7 @@ class App extends React.Component
     this.resetRating();
     this.resetData();
 
-  };
+  }
 
   // Render's the application structure and child components
   render () {
