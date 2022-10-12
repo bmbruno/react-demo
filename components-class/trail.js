@@ -28,6 +28,7 @@ class Trail extends React.Component {
     }
 
     render() {
+
         return (
 
             <div className="trail-detail">
@@ -53,5 +54,6 @@ class Trail extends React.Component {
             </div>
 
         );
+        
     }
 }

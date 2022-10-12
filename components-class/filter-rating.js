@@ -35,6 +35,7 @@ class Rating extends React.Component {
     }
     
     render() {
+        
         return (
 
             <div className="filter rating">
@@ -47,5 +48,6 @@ class Rating extends React.Component {
             </div>
 
         );
+        
     }
 }

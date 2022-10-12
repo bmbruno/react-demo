@@ -5,7 +5,29 @@ This sample React application lets you quickly play with simple React concepts i
 More information:
 https://stackoverflow.com/questions/53042123/can-babel-standalone-be-used-if-index-html-is-served-locally-no-webserver
 
-Each component has a [class-based](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/) and function-based version. This allows you two view them side-by-side to compare the syntax, logic, and readability differences between each.
+Each component has a [class-based](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/) and function-based version. This allows you two view them side-by-side to compare the syntax, logic, and readability differences between class and function components.
+
+You can switch between using class and function components by chaning the path to each script file at the bottom of `index.html`. For example:
+
+Class-based components:
+
+``` javascript
+<script src="components-class/title.js" type="text/babel"></script>
+<script src="components-class/trail.js" type="text/babel"></script>
+<script src="components-class/filter-typeahead.js" type="text/babel"></script>
+<script src="components-class/filter-rating.js" type="text/babel"></script>
+<script src="components-class/app.js" type="text/babel"></script>
+```
+
+Function-based components:
+
+``` javascript
+<script src="components-function/title.js" type="text/babel"></script>
+<script src="components-function/trail.js" type="text/babel"></script>
+<script src="components-function/filter-typeahead.js" type="text/babel"></script>
+<script src="components-function/filter-rating.js" type="text/babel"></script>
+<script src="components-function/app.js" type="text/babel"></script>
+```
 
 ## Live Demo
 

@@ -21,10 +21,12 @@ class Title extends React.Component {
     }
 
     render() {
+
         return (
 
             <h1 style={{ textAlign: this.props.alignment }}>{this.props.text}</h1>
 
         );
+        
     }
 }
