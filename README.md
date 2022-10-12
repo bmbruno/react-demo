@@ -1,13 +1,11 @@
 ## About
 
-This sample React application lets you quickly play with simple React concepts in your local browser. It uses client-side Babel to transpile JSX to JavaScript on the fly. You will need to run these files from a local web server to avoid browser security issues.
+This sample React application lets you quickly play with simple React concepts in your local browser. It uses client-side Babel to transpile JSX to JavaScript on the fly. You will need to run these files from a local web server to avoid browser security issues ([details here](https://stackoverflow.com/questions/53042123/can-babel-standalone-be-used-if-index-html-is-served-locally-no-webserver)).
 
-More information:
-https://stackoverflow.com/questions/53042123/can-babel-standalone-be-used-if-index-html-is-served-locally-no-webserver
 
-Each component has a [class-based](https://www.pragimtech.com/blog/reactjs/introduction-to-class-components-in-react/) and function-based version. This allows you two view them side-by-side to compare the syntax, logic, and readability differences between class and function components.
+Each component has a **class-based** and a **function-based** version. This allows you two view two of the same component side-by-side to compare the syntax, logic, and readability differences between class and function components.
 
-You can switch between using class and function components by chaning the path to each script file at the bottom of `index.html`. For example:
+You can switch between using class and function components by changing the path to each script file at the bottom of `index.html`. For example:
 
 Class-based components:
 
