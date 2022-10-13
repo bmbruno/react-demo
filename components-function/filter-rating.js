@@ -18,11 +18,6 @@ ABOUT
 
 const Rating = ({ id, label, value, onRatingChange }) => {
 
-    // Ref Hooks: stores a reference to HTML elements that code will need
-    const refEasy = React.useRef();
-    const refModerate = React.useRef();
-    const refDifficult = React.useRef();
-
     const onRadioChange = (event) => {
 
         // Lift state to parent component via a prop

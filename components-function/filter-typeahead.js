@@ -18,8 +18,6 @@ ABOUT
 
 const TypeAhead = ({ id, label, value, onTypeAheadChange }) => {
 
-    const refInput = React.createRef();
-
     const typeAheadKeyUp = (event) => {
 
         onTypeAheadChange(event.target.value);
@@ -35,7 +33,6 @@ const TypeAhead = ({ id, label, value, onTypeAheadChange }) => {
                 className="text typeahead"
                 onKeyUp={typeAheadKeyUp}
                 id={id}
-                ref={refInput}
                 defaultValue={value} />
         </div>
 

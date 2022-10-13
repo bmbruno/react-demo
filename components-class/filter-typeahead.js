@@ -23,7 +23,6 @@ class TypeAhead extends React.Component {
         super(props);
 
         this.typeAheadKeyUp = this.typeAheadKeyUp.bind(this);
-        this.refInput = React.createRef();
 
     }
 
@@ -41,7 +40,6 @@ class TypeAhead extends React.Component {
                 <label htmlFor={this.props.id} className="title">{this.props.label}</label>
                 <input
                     type="text"
-                    ref={this.refInput}
                     className="text typeahead"
                     onKeyUp={this.typeAheadKeyUp}
                     id={this.props.id}

@@ -19,12 +19,11 @@ ABOUT
 class Rating extends React.Component {
 
     constructor(props) {
+        
         super(props);
 
         this.onRadioChange = this.onRadioChange.bind(this);
-        this.refEasy = React.createRef();
-        this.refModerate = React.createRef();
-        this.refDifficult = React.createRef();
+
     }
 
     onRadioChange(event) {
