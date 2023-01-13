@@ -31,6 +31,12 @@ Function-based components:
 
 * [https://www.brandonbruno.com/sites/code/reactdemo](https://www.brandonbruno.com/sites/code/reactdemo)
 
+## Presentations
+
+Links to my presentation _A React Crash Course for Backend Dinosaurs_, as presented at various conferences:
+
+* [CodeMash 10000](https://www.brandonbruno.com/sites/speaking/ReactCrashCourse_CodeMash2023.pdf) (2023, PDF)
+
 ## React Learning Resources
 
 * https://reactjs.org/docs/hello-world.html
